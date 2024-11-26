@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+
+}
+
+nav {
+    top: 0;
+    left: 0px;
+    position: fixed;
+    height: 100%;
+    width: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    transition: 0.8s;
+}
+
+body{
+    background-image: url(bekgron.png);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.sidebar-ui {
+    display: none;
+}
+
+nav.active{
+    width: 300px;
+}
+
+nav.active .sidebar-ui{
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logo img{
+    height: 45px;
+    padding-left: 50px;
+    margin-top: 40px;
+}
+
+.side-list{
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 20px 0px 150px 0px;
+}
+
+.side-item{
+    padding-left: 20px;
+    list-style: none;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-bottom-color: grey;
+}
+
+.side-item:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+.side-item a {
+    color: white;
+    line-height: 55px;
+    font-size: 24px;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sub-menu:before {
+    content: '\f0d7';
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 55px;
+    color: #ffffff;
+    right: 55%;
+}
+
+.sub-menu.active:before{
+    content: '\f0d8';
+}
+
+.side-item ul{
+    margin-left: -20px;
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sub-menu.active ul{
+    display: block;
+}
+
+.side-item ul li{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 40px;
+    display: block;
+}
+
+.toggle-menu{
+    margin-left: 15px;
+    position: relative;
+    color: #ffffff;
+    line-height: 55px;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.toggle-menu.active{
+    margin-left: 305px;
+}
+
+.menu {
+    width: 250px;
+    margin-top: 725px;
+    background-color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-left: 27px;
+}
+
+.menu .item{
+    position: relative;
+    cursor: pointer;
+   
+}
+
+.menu .item a{
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+}
+
+.item i{
+    margin-right: 15px;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container .title{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 7rem;
+}
+
+.container .product-container .product{
+    text-align: center;
+    padding: 2rem 2rem;
+    background: #fff;
+    box-shadow: 0.5rem 1rem rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.product img{
+    width: 300px;
+    height: 300px;
+}
+
+.container .product-container .product img:hover{
+    transform: scale(.9);
+}
+
+.container .product-container .product .time{
+    font-size: 12px;
+}
+
+.container .product-container .product h2{
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+
